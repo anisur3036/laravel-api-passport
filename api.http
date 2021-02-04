@@ -1,0 +1,21 @@
+@host = http://localhost:8000/api
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzJkYTc3MmJmYjgxMDY3M2JiNmE5YTY1MGQyNmQyZGJhNzdhMmIxNTQzOTcwZGUzOGQ3MGNiNDhlZTljZjZmYWNiOTNjZDEzM2VmMzc3OGEiLCJpYXQiOiIxNjEyNDM3MDY0LjkzMzc3OCIsIm5iZiI6IjE2MTI0MzcwNjQuOTMzNzg0IiwiZXhwIjoiMTY0Mzk3MzA2NC45MjA0NDkiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.omWVbVLzrxycmt8evw8Stn5j_7E7ev6sQqGcOJiTcLsj4wXo9ElPJzkQrrKYkJhtk65Pi4vnlCax0jGh5A_udCmqf38ZQpNFOOhYr-ZTFWiqUKcC6kRlnsYzwzf8RJkuYxxvILbwSGS5TLJrajJHjJ9sm_pN4tITSg33MAA_Zrw6xaZHPzlcBqh2REw53YMbjHjDOSGw-cW5GekpGhedr760Rq2KUFWSFd-NVE-_24inzKZVsXJ82G3srn4RrzD_OsVd50-WlJF7znbTC0Gn-BTrHqm9z-bfyTQWXYxlJM3kVr4Rp5zKC82Lo5laRlbEBnCIQY4ZfspsBuoqD6hVdYhXimVJpw3r5JdgrXVyyUgft3aNb64nA5Bw1DNxcoYhN6bIM53hbq9uSf5MrTqfaVald1D4wGbf9uOG0oHJU4T4hHDu9aKxuboxk5N7n9DMknZmC2vUZhX38xyUh1a1tWV2hEPwv-B2U7HwVhUJF6nPFxm6ic3XtOxVIck41S6TQQNNWxw69a_vcQ_trhzHYwQqsWMIqh1kSar5VJEMRkW6mMxM3-BCi88pyoje50TQUebhqeMWboCQbxReNk6uYkS1rp-jevvnfkotlIJrv3_5KkAFgmz15UWy_nApyObsAP8iy-QZEHtkPNOMcg9viVX0d8LBpv4b-XRmB0K-3F8
+
+
+
+### Login to application
+POST {{host}}/login
+Content-Type: application/json
+
+{
+    "email": "anisur@app.com",
+    "password": "password"
+}
+
+### Get User Information
+GET {{host}}/user
+Authorization: Bearer {{token}}
+
+### Get User Information
+POST {{host}}/logout
+Authorization: Bearer {{token}}
